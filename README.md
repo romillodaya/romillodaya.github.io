@@ -3,6 +3,8 @@
 A dark-first, GitHub Pages-ready personal portfolio for writing, experiments,
 photographs, travel notes, and the occasional side quest.
 
+![sample](v1_amoled_dark_light.png)
+
 ## Make it yours
 
 The reusable writing, project, and field-note content lives in `app/content.ts`.
