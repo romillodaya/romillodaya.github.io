@@ -1,0 +1,76 @@
+[
+  {
+    "theme": "dark",
+    "pairs": [
+      {
+        "sel": ".intro-detail",
+        "ratio": 7.6646720280735146
+      },
+      {
+        "sel": ".desk-writing .desk-card-label",
+        "ratio": 6.221169814909742
+      },
+      {
+        "sel": ".desk-project .desk-card-label",
+        "ratio": 9.009458016664903
+      },
+      {
+        "sel": ".desk-travel .desk-card-label",
+        "ratio": 8.40003244705604
+      },
+      {
+        "sel": ".tone-red .inline-link",
+        "ratio": 13.833557996608677
+      },
+      {
+        "sel": ".tone-green .inline-link",
+        "ratio": 10.988925364624675
+      },
+      {
+        "sel": ".tone-yellow .inline-link",
+        "ratio": 13.833557996608677
+      },
+      {
+        "sel": ".explore-item small",
+        "ratio": 6.579250945796846
+      }
+    ]
+  },
+  {
+    "theme": "light",
+    "pairs": [
+      {
+        "sel": ".intro-detail",
+        "ratio": 5.719674857328773
+      },
+      {
+        "sel": ".desk-writing .desk-card-label",
+        "ratio": 4.801409278895833
+      },
+      {
+        "sel": ".desk-project .desk-card-label",
+        "ratio": 4.824387950988842
+      },
+      {
+        "sel": ".desk-travel .desk-card-label",
+        "ratio": 5.6926846935042414
+      },
+      {
+        "sel": ".tone-red .inline-link",
+        "ratio": 13.554515734284875
+      },
+      {
+        "sel": ".tone-green .inline-link",
+        "ratio": 12.503317480157696
+      },
+      {
+        "sel": ".tone-yellow .inline-link",
+        "ratio": 13.554515734284875
+      },
+      {
+        "sel": ".explore-item small",
+        "ratio": 5.967239176272207
+      }
+    ]
+  }
+]

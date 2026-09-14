@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ProjectVisual } from '../../components/project-visual';
 import { getProject, projects } from '../../content';
 
 export function generateStaticParams() {
@@ -26,11 +25,11 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   if (!project) notFound();
 
   return (
-    <main className="project-detail page-shell">
+    <main id="main-content" className="project-detail page-shell">
       <Link className="breadcrumb" href="/projects">← Project archive</Link>
       <header className="project-detail-header">
         <div>
-          <p className="section-kicker"><span>{project.index.replace('P—', '')}</span> Case file</p>
+          <p className="section-kicker"><span>{project.index.replace('P-', '')}</span> Sample project</p>
           <h1>{project.title}</h1><p>{project.copy}</p>
         </div>
         <dl>
@@ -40,7 +39,6 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </dl>
       </header>
 
-      <ProjectVisual visual={project.visual} className="detail-project-visual" />
 
       <div className="case-study">
         <aside><span>Built with</span><ul>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></aside>
@@ -51,7 +49,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
         </div>
       </div>
 
-      <aside className="project-cta"><div><small>STATUS.LOG</small><h2>This is starter project copy.</h2><p>Replace it with screenshots, decisions, constraints, and the wonderfully specific details of the real thing.</p></div><a href="mailto:hello@example.com">Ask me about it ↗</a></aside>
+      <p className="demo-note">This is a sample project concept from the original demo.</p>
     </main>
   );
 }

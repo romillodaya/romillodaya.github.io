@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { PhotoArt } from '../../components/photo-art';
+import { PhotoArt, photographs } from '../../components/photo-art';
 import { fieldNotes, getFieldNote } from '../../content';
 
 export function generateStaticParams() {
@@ -28,15 +28,16 @@ export default async function FieldNotePage({ params }: { params: Promise<{ slug
   const nextNote = fieldNotes[(currentIndex + 1) % fieldNotes.length];
 
   return (
-    <main className="field-detail page-shell">
+    <main id="main-content" className="field-detail page-shell">
       <Link className="breadcrumb" href="/field-notes">← Field notebook</Link>
-      <header><span>FIELD NOTE · {note.number}</span><h1>{note.title}</h1><p>{note.subtitle}</p></header>
-      <PhotoArt art={note.art} label={`Abstract placeholder artwork for ${note.title}`} />
+      <header><span>FIELD NOTE / {note.number} · SAMPLE STORY</span><h1>{note.title}</h1><p>{note.subtitle}</p></header>
+      <PhotoArt art={note.art} label={note.title} />
+      <p className="photo-credit">Sample photograph by <a href={photographs[note.art].source} target="_blank" rel="noreferrer">{photographs[note.art].photographer} / Unsplash ↗</a></p>
       <div className="field-story">
-        <aside><span>{note.capture}</span><small>{note.date}</small></aside>
+        <aside><span>Field note {note.number}</span><small>{note.date}</small></aside>
         <div>{note.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
       </div>
-      <nav className="next-read"><small>Keep wandering</small><Link href={`/field-notes/${nextNote.slug}`}><span>{nextNote.title}</span><i>→</i></Link></nav>
+      <nav className="next-read" aria-label="Continue reading field notes"><small>Keep wandering</small><Link href={`/field-notes/${nextNote.slug}`}><span>{nextNote.title}</span><i>→</i></Link></nav>
     </main>
   );
 }

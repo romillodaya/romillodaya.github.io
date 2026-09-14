@@ -27,11 +27,11 @@ export default async function WritingPostPage({ params }: { params: Promise<{ sl
   const nextPost = writing[(currentIndex + 1) % writing.length];
 
   return (
-    <main className={`article-page ${post.accent}`}>
+    <main id="main-content" className={`article-page ${post.accent}`}>
       <article>
         <header className="article-header">
           <Link className="breadcrumb" href="/writing">← All writing</Link>
-          <div className="article-meta"><span>{post.category}</span><span>{post.published}</span><span>{post.readTime}</span></div>
+          <div className="article-meta"><span>{post.category} · Sample essay</span><span>{post.published}</span><span>{post.readTime}</span></div>
           <h1>{post.title}</h1>
           <p>{post.opening}</p>
           <div className="article-rule"><span>{post.number}</span><i /></div>
@@ -40,12 +40,12 @@ export default async function WritingPostPage({ params }: { params: Promise<{ sl
         <div className="article-layout">
           <aside className="article-aside">
             <span>In this note</span>
-            <ol>{post.sections.map((section) => <li key={section.heading}>{section.heading}</li>)}</ol>
+            <ol>{post.sections.map((section) => <li key={section.heading}><a href={`#${section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{section.heading}</a></li>)}</ol>
             <small>Last tended<br />{post.published}</small>
           </aside>
           <div className="prose">
             {post.sections.map((section, index) => (
-              <section key={section.heading}>
+              <section id={section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-")} key={section.heading}>
                 <span className="prose-number">0{index + 1}</span>
                 <h2>{section.heading}</h2>
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -57,7 +57,7 @@ export default async function WritingPostPage({ params }: { params: Promise<{ sl
       </article>
 
       <nav className="next-read" aria-label="Continue reading">
-        <small>Next rabbit hole</small>
+        <small>Keep reading</small>
         <Link href={`/writing/${nextPost.slug}`}><span>{nextPost.title}</span><i>→</i></Link>
       </nav>
     </main>

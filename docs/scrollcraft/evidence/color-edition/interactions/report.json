@@ -1,0 +1,425 @@
+{
+  "results": [
+    "Hero identifies Romil, has supplied social URLs, and its real content cards change 3D transform on scroll.",
+    "All three selections update pressed state, actual photograph, title, excerpt, credit and both story destinations.",
+    "Selected reading link opens the correct field note.",
+    "Theme switches and persists through reload.",
+    "Colored labels and supporting text pass 4.5:1 on their real card backgrounds in light and dark themes.",
+    "Keyboard checked 45 targets for visible focus and reading order.",
+    "All 15 content routes render with one h1, main landmark, no horizontal overflow and working images.",
+    "Solid-ground text contrast passes 4.5:1 for 8 representative body/metadata styles.",
+    "Reduced-motion phone shows the complete print and keeps every selection usable.",
+    "Without JavaScript, the default story and standard navigation remain readable and reachable."
+  ],
+  "errors": [],
+  "network": [],
+  "canceledPrefetches": [
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/__next._head.txt?_rsc=5oha_MqiFWlStH9F",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/__next._index.txt?_rsc=6Q1v7HcIw7d_mkmQ",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/__next._head.txt?_rsc=5oha_MqiFWlStH9F",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/__next._index.txt?_rsc=nMjUel7geKVgoNTL",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/city-in-three-colours/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/city-in-three-colours/__next.field-notes.$d$slug.txt?_rsc=8i9xRr_2PkJRtsV7",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/city-in-three-colours/__next.field-notes.$d$slug.__PAGE__.txt?_rsc=OypehPyP9-Do_ipv",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/__next._head.txt?_rsc=TNpbzKmo2yztWeDZ",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/__next._index.txt?_rsc=F3r_Wt166xn5hFqF",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/before-breakfast/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/blue-ten-minutes/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/blue-ten-minutes/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/city-in-three-colours/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/before-breakfast/",
+    "net::ERR_ABORTED fetch http://localhost:4500/field-notes/city-in-three-colours/__next._index.txt?_rsc=7L6GgZytC_sNzEuM",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/do-i-need-this/",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/window-seat/",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/papertrail/",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/do-i-need-this/__next.projects.$d$slug.__PAGE__.txt?_rsc=5nM0_L7Q6i8HKyKW",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/papertrail/__next._head.txt?_rsc=x3oVFhKWntTOIIdL",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/papertrail/__next.projects.$d$slug.txt?_rsc=xDhObb1LdvKGEPXS",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/__next._head.txt?_rsc=2RrTm5lNmD2OGB8i",
+    "net::ERR_ABORTED fetch http://localhost:4500/projects/__next._index.txt?_rsc=FsdIWwOqypc2vTJl",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/__next._head.txt?_rsc=qjW2u8-tWcKI9T2Q",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/__next.writing.txt?_rsc=v7jC4rTeJkwgkF3k",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/__next._index.txt?_rsc=u8PUz0r0U6pBQAbd",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/side-project-systems-lesson/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/side-project-systems-lesson/__next._tree.txt?_rsc=H5FGr8pvdp8SsvRc",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/__next._head.txt?_rsc=E3yKSHcZc_EwwaFE",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/__next._index.txt?_rsc=0AFcdruaSdifQVwO",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/confused-productively/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/idea-deserves-a-weekend/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/rebuilding-digital-garden/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/side-project-systems-lesson/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/confused-productively/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/idea-deserves-a-weekend/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/__next._index.txt?_rsc=LIANw0CaBUKO2aKr",
+    "net::ERR_ABORTED fetch http://localhost:4500/writing/rebuilding-digital-garden/"
+  ],
+  "intentionallyDisabledScripts": [
+    "csp script http://localhost:4500/_next/static/chunks/08799pyeb7s4f.js",
+    "csp script http://localhost:4500/vendor/scrollcraft.js",
+    "csp script http://localhost:4500/_next/static/chunks/08799pyeb7s4f.js"
+  ],
+  "contrast": [
+    {
+      "sel": ".intro-hello",
+      "ratio": 5.719674857328773
+    },
+    {
+      "sel": ".intro-detail",
+      "ratio": 5.719674857328773
+    },
+    {
+      "sel": ".lead-essay > p",
+      "ratio": 5.203521545785736
+    },
+    {
+      "sel": ".notebook-entry p",
+      "ratio": 5.719674857328773
+    },
+    {
+      "sel": ".memory-caption > p",
+      "ratio": 5.276094847384851
+    },
+    {
+      "sel": ".memory-credit",
+      "ratio": 5.276094847384851
+    },
+    {
+      "sel": ".contact-photo span",
+      "ratio": 5.45651088389544
+    },
+    {
+      "sel": ".closing-bookmark > p",
+      "ratio": 5.719674857328773
+    }
+  ],
+  "keyboard": [
+    {
+      "text": "Skip to content",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Romil Lodaya",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Writing",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Stories",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Projects",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "About",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Switch to dark theme",
+      "tag": "BUTTON",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "About Romil",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Latest writing",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Travel & stories",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Projects",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "One more page",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Explore the writing",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "More about me ↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "GitHub (opens in a new tab)",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "LinkedIn (opens in a new tab)",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "From the notebook ↗A tiny guide to being confused productively",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "On the workbench ↗PapertrailSmall ideas, made into things.",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "A change of sceneBeyond the screen.Trips, moments & stories ↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Writing & notesIdeas, essays, and things learned.",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Travel & storiesPlaces, people, and little detours.",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "ProjectsExperiments and things I’m making.",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "All posts ↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "A tiny guide to being confused productively",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Read the essay ↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Engineering · July 2026The side project that became a systems lesson↗I",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Web · June 2026Rebuilding my digital garden (again)↗What I kept, what ",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Process · May 2026Does this idea deserve a weekend?↗A deeply unscienti",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "All stories ↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Morning",
+      "tag": "BUTTON",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "After dark",
+      "tag": "BUTTON",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "By the water",
+      "tag": "BUTTON",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Read the story ↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Daniil Silantev / Unsplash",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "All projects ↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "PapertrailOngoingA quiet tool that turns reading highlights into a tra",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Window SeatTiny & usefulA personal photo map for remembering a place b",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Somewhere before breakfast↗",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Romil Lodaya.",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "GitHub (opens in a new tab)",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "LinkedIn (opens in a new tab)",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "About",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Writing",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Back to top ↑",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    },
+    {
+      "text": "Skip to content",
+      "tag": "A",
+      "opacity": 1,
+      "visible": true,
+      "outline": "solid"
+    }
+  ]
+}

@@ -115,7 +115,7 @@ export const writing: WritingPost[] = [
       {
         heading: 'Leave some fingerprints',
         paragraphs: [
-          'The terminal card, uneven notes, and tiny asides are not features. They are texture. They make the site feel maintained by a particular human instead of generated from a portfolio checklist.',
+          'The choices that matter are usually small: what you write about, the photographs you keep, and the observations only you would make. A simple page leaves room for those details.',
         ],
       },
     ],
@@ -173,8 +173,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    index: 'P—01', slug: 'papertrail', status: 'Ongoing', title: 'Papertrail',
-    copy: 'A quiet tool that turns reading highlights into a trail of connected ideas — without becoming another inbox to maintain.',
+    index: 'P-01', slug: 'papertrail', status: 'Ongoing', title: 'Papertrail',
+    copy: 'A quiet tool that turns reading highlights into a trail of connected ideas. without becoming another inbox to maintain.',
     tags: ['next.js', 'local-first', 'search'], visual: 'papertrail', year: '2026', role: 'Design & engineering',
     challenge: 'Highlights are easy to collect and hard to encounter again. Most tools optimize capture, then leave reflection as homework.',
     approach: [
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     takeaway: 'The most useful knowledge tool may be the one that asks for less organization, not more.',
   },
   {
-    index: 'P—02', slug: 'window-seat', status: 'Tiny & useful', title: 'Window Seat',
+    index: 'P-02', slug: 'window-seat', status: 'Tiny & useful', title: 'Window Seat',
     copy: 'A personal photo map for remembering a place by its textures, sounds, wrong turns, and excellent cups of chai.',
     tags: ['maps', 'photography', 'pwa'], visual: 'window-seat', year: '2026', role: 'Concept, photos & code',
     challenge: 'Photo libraries remember timestamps and coordinates. They rarely remember why a corner, sound, or accidental detour mattered.',
@@ -195,7 +195,7 @@ export const projects: Project[] = [
     takeaway: 'A memory tool should make you want to remember, not make you feel behind.',
   },
   {
-    index: 'P—03', slug: 'do-i-need-this', status: 'Mildly ridiculous', title: 'Do I Need This?',
+    index: 'P-03', slug: 'do-i-need-this', status: 'Mildly ridiculous', title: 'Do I Need This?',
     copy: 'A three-question speed bump between seeing a shiny object and adding it to cart. Annoyingly effective.',
     tags: ['experiment', 'behavior', 'weekend'], visual: 'need-this', year: '2025', role: 'Questionable product decisions',
     challenge: 'Wish lists remove the urgency of checkout, but they still feel like shopping. I wanted a tool designed around changing your mind.',
@@ -222,12 +222,12 @@ export const fieldNotes: FieldNote[] = [
   {
     number: '001', slug: 'before-breakfast', title: 'Somewhere before breakfast', subtitle: 'Cold air, warm light, no notifications.',
     art: 'mountain-art', capture: '35mm · 06:14', date: 'A quiet morning, 2026',
-    body: ['We left before the road had decided to wake up. The first tea stall was still stacking glasses when the light slipped over the ridge.', 'This is a placeholder field note for a real photo essay: a small observation, a few frames, and enough empty space to let the place breathe.'],
+    body: ['We left before the road had decided to wake up. The first tea stall was still stacking glasses when the light slipped over the ridge.', 'We stayed for a second glass. There was nowhere we needed to be, and for once that felt like enough.'],
   },
   {
     number: '002', slug: 'city-in-three-colours', title: 'A city in three colours', subtitle: 'Blue hour, sodium orange, one stubborn green sign.',
     art: 'street-art', capture: 'digital · after dark', date: 'An evening walk, 2026',
-    body: ['Cities become diagrams at night. Windows turn into pixels, traffic draws temporary lines, and familiar buildings lose their edges.', 'Replace this study with a neighbourhood you know by sound, a night walk, or the frames that never quite fit into a social post.'],
+    body: ['Cities become diagrams at night. Windows turn into pixels, traffic draws temporary lines, and familiar buildings lose their edges.', 'I put the camera away for the last stretch and followed the sounds instead. A closing shutter, a passing train, someone laughing on a balcony.'],
   },
   {
     number: '003', slug: 'blue-ten-minutes', title: 'The blue ten minutes', subtitle: 'The brief negotiation between day and night.',
@@ -239,3 +239,10 @@ export const fieldNotes: FieldNote[] = [
 export function getWritingPost(slug: string) { return writing.find((post) => post.slug === slug); }
 export function getProject(slug: string) { return projects.find((project) => project.slug === slug); }
 export function getFieldNote(slug: string) { return fieldNotes.find((note) => note.slug === slug); }
+
+for (const post of writing) {
+  const words = [post.opening, ...post.sections.flatMap(section => [section.heading, ...section.paragraphs, section.note ?? ''])].join(' ').trim().split(/\s+/).length;
+  const minutes = Math.max(1, Math.ceil(words / 220));
+  post.readTime = `${minutes} min read`;
+  post.meta = `${post.category} · ${minutes} min`;
+}

@@ -1,18 +1,6 @@
-import Link from 'next/link';
-
+import { SocialLinks } from './social-links';
+import { assetPath } from './photo-art';
+// Full document navigation releases the unmodified Scroll Craft engine, which has no unmount API.
 export function SiteFooter() {
-  return (
-    <footer id="contact">
-      <div className="footer-inner">
-        <p className="footer-kicker">You made it to the footer. Impressive stamina.</p>
-        <h2>Have a strange idea?<br /><span>Let&apos;s make it stranger.</span></h2>
-        <a className="big-email" href="mailto:hello@example.com">hello@example.com <span>↗</span></a>
-        <div className="footer-bottom">
-          <Link className="wordmark" href="/"><span className="prompt">~/</span>romil<span className="cursor" /></Link>
-          <p>Designed with curiosity. Built with too many browser tabs.</p>
-          <div><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a><Link href="/writing">RSS</Link><Link href="/">Back home ↑</Link></div>
-        </div>
-      </div>
-    </footer>
-  );
+  return <footer className="site-footer"><div><a className="wordmark" href={assetPath('/')}>Romil Lodaya<span className="blue">.</span></a><p>A little space to think out loud.</p><SocialLinks /></div><nav aria-label="Footer navigation"><a href={assetPath('/about')}>About</a><a href={assetPath('/writing')}>Writing</a><a href="#top">Back to top ↑</a></nav><span className="footer-colophon">© {new Date().getFullYear()} Romil Lodaya</span></footer>;
 }
