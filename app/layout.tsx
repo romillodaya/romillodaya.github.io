@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'dark light',
   themeColor: [
-    { media: '(prefers-color-scheme: dark)', color: '#242329' },
-    { media: '(prefers-color-scheme: light)', color: '#faf9f6' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+    { media: '(prefers-color-scheme: light)', color: '#fafafa' },
   ],
 };
 
@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <body id="top">
-        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('romil-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;}catch(e){}})();` }} />
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('romil-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;var s=localStorage.getItem('romil-switch-sound');if(s==='off'||s==='on')document.documentElement.dataset.switchSound=s;}catch(e){}})();` }} />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />
         {children}

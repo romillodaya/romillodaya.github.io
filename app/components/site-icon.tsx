@@ -1,7 +1,12 @@
 import type { SVGProps } from 'react';
-export type IconName = 'write' | 'compass' | 'code' | 'arrow' | 'github' | 'linkedin';
+export type IconName = 'write' | 'compass' | 'code' | 'arrow' | 'github' | 'linkedin' | 'scholar' | 'sun' | 'moon' | 'sound' | 'muted';
 export function SiteIcon({ name, ...props }: SVGProps<SVGSVGElement> & { name: IconName }) {
   const paths = {
+    scholar: <><path d="m2 9 10-7 10 7-10 7L2 9Z"/><path d="M6 12v6c3 3 9 3 12 0v-6M22 9v8"/></>,
+    sun: <><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></>,
+    moon: <path d="M20 15.3A8.5 8.5 0 0 1 8.7 4 8.5 8.5 0 1 0 20 15.3Z"/>,
+    sound: <><path d="m11 5-5 4H3v6h3l5 4V5Z"/><path d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></>,
+    muted: <><path d="m11 5-5 4H3v6h3l5 4V5Z"/><path d="m16 9 6 6m0-6-6 6"/></>,
     write: <><path d="M15 5H6a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-8"/><path d="m12 13 8-8-3-3-8 8-1 4 4-1Z"/><path d="m15 4 3 3"/></>,
     compass: <><circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/></>,
     code: <><path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18"/></>,

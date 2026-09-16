@@ -61,3 +61,7 @@ For the design brief and browser verification evidence, see `docs/scrollcraft/`.
 ## Personal color edition
 
 The homepage introduces Romil by name, with a scroll-responsive 3D stack of linked content cards and direct category navigation. Red identifies writing, green identifies stories, yellow accents projects, and blue remains a secondary accent. Reduced motion disables the card transforms. The latest design and verification record is `docs/scrollcraft/COLOR-EDITION.md`.
+
+## Signal palette and switch
+
+Signal replaces the pastel surfaces with neutral white/near-black backgrounds and saturated accents. Palette tokens live in `app/globals.css`. `app/components/theme-switch.tsx` provides a keyboard-accessible day/night slider, a short synthesized click, and a persistent mute option. Google Scholar joins the supplied GitHub and LinkedIn links in `app/components/social-links.tsx`. See `docs/scrollcraft/SIGNAL.md` for the current decisions and checks.

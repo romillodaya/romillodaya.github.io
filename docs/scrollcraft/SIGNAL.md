@@ -1,0 +1,13 @@
+# Signal palette and theme control
+
+User selected the Signal sample and supplied Google Scholar profile qtpDmGoAAAAJ. Applied neutral #0A0A0A dark canvas, #171717 cards, and #FAFAFA/#FFFFFF light surfaces. Dark accents: red #FF4D4D, blue #3985FF, green #26C281, yellow #FFC62F. Light text accents use deeper shades for readability. Colored pastel grounds were replaced by neutral surfaces; color now identifies borders, labels, icons and the main writing action.
+
+References reviewed: https://www.apoorvgupta.com/ (vintage tactile toggle) and https://www.dsnikhil.com/ (the portfolio embedded by the supplied Wall of Portfolios URL; bold red surface and compact icon navigation). The implementation retains Romil's reading-oriented structure and uses an original small day/night slider. No reference code, artwork or audio was copied.
+
+The switch is a native button with switch semantics and a stable Dark mode label. Space/Enter work through native button activation. Its 50ms click is synthesized locally with Web Audio only on activation; audio failure cannot block theme changes. A separate sound button saves the mute preference. Theme and mute settings load before hydration. The existing reduced-motion rule disables thumb animation.
+
+GitHub, LinkedIn and Google Scholar use visible names plus icons in the shared social component. The supplied Scholar URL is present in both introduction and footer. No citations, institutional affiliation or biography was inferred from the profile.
+
+Validation: ESLint and Next.js GitHub Pages export passed. The local static export was visually inspected in light/dark on desktop and at 360px. Theme toggling by click/Space and theme/mute persistence after reload were verified. Seven representative text/icon pairs measured 5.19:1 or higher in light mode, and 5.48:1 or higher in dark mode. No browser console errors were captured. A mobile decorative ellipse overflow was fixed and the final document width matches the viewport. Acoustic quality and physical mobile hardware were not evaluated. No commit, push or publication performed.
+
+Navigation regression fix: thumb position and indicator now follow the pre-paint `data-theme` attribute instead of the server-default `aria-checked` value. This prevents a light-to-dark animation on each document navigation while preserving deliberate toggle animation and reduced-motion behavior. Verified using the exported header without hydration scripts (dark thumb correctly positioned despite server-default ARIA), navigation across Projects/Writing/Stories/About, light and dark persistence, click/Space activation, and the 360px breakpoint. Next.js Pages export passed; no browser console errors.
