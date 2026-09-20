@@ -43,9 +43,9 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <div className="case-study">
         <aside><span>Built with</span><ul>{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul></aside>
         <div>
-          <section><span className="prose-number">01</span><h2>The itch</h2><p>{project.challenge}</p></section>
-          <section><span className="prose-number">02</span><h2>The shape of it</h2>{project.approach.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>
-          <blockquote><span>THE USEFUL BIT</span>{project.takeaway}</blockquote>
+          <section><span className="prose-number">01</span><h2>The problem</h2><p>{project.challenge}</p></section>
+          <section><span className="prose-number">02</span><h2>The approach</h2>{project.approach.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>
+          <blockquote><span>TAKEAWAY</span>{project.takeaway}</blockquote>
         </div>
       </div>
 

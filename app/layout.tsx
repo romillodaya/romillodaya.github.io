@@ -14,19 +14,19 @@ export const metadata: Metadata = {
   icons: { icon: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/favicon.svg` },
   title: {
     default: 'Romil Lodaya · ML / AI Engineer',
-    template: '%s · Romil',
+    template: '%s · Romil Lodaya',
   },
-  description: 'Projects, experiments, and notes on machine learning and AI. A personal corner of the internet by Romil Lodaya.',
+  description: 'Projects and writing on machine learning and AI by Romil Lodaya.',
   openGraph: {
     title: 'Romil Lodaya · ML / AI Engineer',
-    description: 'Projects, experiments, and notes on machine learning and AI. A personal corner of the internet by Romil Lodaya.',
+    description: 'Projects and writing on machine learning and AI by Romil Lodaya.',
     type: 'website',
     images: [{ url: ogImage, width: 1730, height: 909, alt: 'I make useful things, then write down what broke.' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Romil Lodaya · ML / AI Engineer',
-    description: 'Projects, experiments, and notes on machine learning and AI. A personal corner of the internet by Romil Lodaya.',
+    description: 'Projects and writing on machine learning and AI by Romil Lodaya.',
     images: [ogImage],
   },
 };
@@ -35,7 +35,7 @@ export const viewport: Viewport = {
   colorScheme: 'dark light',
   themeColor: [
     { media: '(prefers-color-scheme: dark)', color: '#101113' },
-    { media: '(prefers-color-scheme: light)', color: '#faf9f6' },
+    { media: '(prefers-color-scheme: light)', color: '#fafaf8' },
   ],
 };
 
@@ -45,8 +45,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
-      <body id="top" className={`${dmSans.variable} ${kalam.variable}`}>
+    // Shared font tokens resolve on :root, so their font variables must live here too.
+    <html lang="en" data-theme="dark" className={`${dmSans.variable} ${kalam.variable}`} suppressHydrationWarning>
+      <body id="top">
         <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('romil-theme');if(t==='dark'||t==='light')document.documentElement.dataset.theme=t;var s=localStorage.getItem('romil-switch-sound');if(s==='off'||s==='on')document.documentElement.dataset.switchSound=s;}catch(e){}})();` }} />
         <a className="skip-link" href="#main-content">Skip to content</a>
         <SiteHeader />

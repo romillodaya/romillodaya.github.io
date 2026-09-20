@@ -2,10 +2,10 @@
 
 A personal portfolio for ML / AI work, writing, browser utilities, and field notes. Built with React and Next.js, with a Vinext preview and GitHub Pages export.
 
-The current design is documented in `docs/portfolio-redesign/DESIGN.md`. Start with that document; the editions below describe earlier iterations. The supplied illustrated portrait appears on the homepage and About page. The résumé, actual projects, and dated timeline are reserved for the content pass.
+The current changes are documented in `docs/portfolio-redesign/REFRESH.md`, following the initial design in `docs/portfolio-redesign/DESIGN.md`. The editions below describe earlier iterations. The supplied illustrated portrait appears on the About page. The résumé, actual projects, and dated timeline are reserved for the content pass.
 
 - `app/page.tsx`: homepage composition.
-- `app/components/idea-network.tsx`: interactive neural sketch.
+- `app/components/idea-network.tsx`: interactive neural signal illustration.
 - `app/components/footer-companion.tsx`: original footer mascot.
 - `app/components/playground-tools.tsx`: client-only vector and text tools.
 - `app/about/page.tsx`: biography and timeline layout.

@@ -1,10 +1,56 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import { Portrait, Scribble } from '../components/design-elements';
+import { Portrait } from '../components/design-elements';
 import { SocialLinks } from '../components/social-links';
 import { SiteIcon } from '../components/site-icon';
-export const metadata: Metadata = { title: 'About', description: 'Romil Lodaya — ML / AI engineer, curious builder, and lifelong learner.' };
-const milestones=[{year:'Earlier',title:'Where it all started',text:'Education, early interests, and the first things I built.'},{year:'Along the way',title:'Following the interesting questions',text:'Research, collaborations, and the projects that shaped my thinking.'},{year:'Now',title:'Turning curiosity into useful things',text:'The work I’m focused on today, and what I’d like to explore next.'}];
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'About Romil Lodaya, ML / AI engineer.',
+};
+
+const milestones = [
+  { year: 'Education', title: 'Education & early work', text: 'Details to be added.' },
+  { year: 'Experience', title: 'Research & engineering', text: 'Details to be added.' },
+  { year: 'Current', title: 'Current work', text: 'Details to be added.' },
+];
+
 export default function AboutPage() {
- return <main id="main-content" className="page-shell about-page"><header className="about-introduction"><div><p className="eyebrow">THE PERSON BEHIND THE WORK</p><h1>Hi again. I’m <span className="underlined">Romil.<Scribble/></span></h1><p className="about-lead">ML / AI engineer.<br/>Curious about how things work.</p><SocialLinks/></div><Portrait eager/></header><div className="about-story"><div className="about-prose"><h2>Good questions are a great place to start.</h2><p>I’m interested in machine learning and AI: the ideas behind intelligent systems, and the engineering that turns those ideas into something useful.</p><p>This site is a place to share that process. Projects, experiments, things I’ve learned, and explanations I hope someone else finds helpful.</p><p>And because there’s more to a person than their work, there’s room here for photographs, stories, and the occasional detour too.</p><Link className="quiet-link" href="/field-notes">A few things beyond the screen <span>↗</span></Link></div><aside className="about-margin"><span className="handwritten">Stay curious.<br/>Make something.<br/>Share what you learn.</span><span aria-hidden="true">✳</span></aside></div><section className="timeline-section" aria-labelledby="timeline-heading"><div className="section-heading"><div><p className="eyebrow">THE PATH SO FAR</p><h2 id="timeline-heading">A brief timeline<span className="yellow">.</span></h2></div><span className="sample-label">Layout preview</span></div><p className="timeline-intro">A space for the milestones. Dates and personal details will be added in the content pass.</p><ol className="timeline">{milestones.map(m=><li key={m.year}><span className="timeline-date">{m.year}</span><div><h3>{m.title}</h3><p>{m.text}</p></div></li>)}</ol></section><section className="resume-section" id="resume"><div><p className="eyebrow">THE SHORT VERSION</p><h2>Looking for my résumé?</h2><p>The PDF will be added soon. You can find me on LinkedIn in the meantime.</p></div><a className="primary-link" href="https://www.linkedin.com/in/romil-lodaya/" target="_blank" rel="noreferrer"><SiteIcon name="linkedin"/>Visit LinkedIn <span>↗</span></a></section></main>;
+  return (
+    <main id="main-content" className="page-shell about-page">
+      <header className="about-introduction">
+        <div>
+          <p className="eyebrow">ABOUT</p>
+          <h1>Romil Lodaya<span className="yellow">.</span></h1>
+          <p className="about-lead">ML / AI engineer.</p>
+          <p className="about-summary">I’m interested in machine learning and the engineering that makes it useful. Here I share projects, technical notes, and occasional photographs.</p>
+          <SocialLinks />
+        </div>
+        <Portrait eager />
+      </header>
+      <section className="timeline-section" aria-labelledby="timeline-heading">
+        <div className="section-heading">
+          <h2 id="timeline-heading">Background<span className="yellow">.</span></h2>
+          <span className="sample-label">Layout preview</span>
+        </div>
+        <p className="timeline-intro">Education and work history will be added here.</p>
+        <ol className="timeline">
+          {milestones.map(milestone => (
+            <li key={milestone.year}>
+              <span className="timeline-date">{milestone.year}</span>
+              <div><h3>{milestone.title}</h3><p>{milestone.text}</p></div>
+            </li>
+          ))}
+        </ol>
+      </section>
+      <section className="resume-section" id="resume">
+        <div>
+          <h2>Résumé</h2>
+          <p>For current experience and education, visit my LinkedIn profile.</p>
+        </div>
+        <a className="primary-link" href="https://www.linkedin.com/in/romil-lodaya/" target="_blank" rel="noreferrer">
+          <SiteIcon name="linkedin" />Visit LinkedIn <span>↗</span>
+        </a>
+      </section>
+    </main>
+  );
 }

@@ -29,7 +29,7 @@ export default async function FieldNotePage({ params }: { params: Promise<{ slug
 
   return (
     <main id="main-content" className="field-detail page-shell">
-      <Link className="breadcrumb" href="/field-notes">← Field notebook</Link>
+      <Link className="breadcrumb" href="/field-notes">← Field notes</Link>
       <header><span>FIELD NOTE / {note.number} · SAMPLE STORY</span><h1>{note.title}</h1><p>{note.subtitle}</p></header>
       <PhotoArt art={note.art} label={note.title} />
       <p className="photo-credit">Sample photograph by <a href={photographs[note.art].source} target="_blank" rel="noreferrer">{photographs[note.art].photographer} / Unsplash ↗</a></p>
@@ -37,7 +37,7 @@ export default async function FieldNotePage({ params }: { params: Promise<{ slug
         <aside><span>Field note {note.number}</span><small>{note.date}</small></aside>
         <div>{note.body.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
       </div>
-      <nav className="next-read" aria-label="Continue reading field notes"><small>Keep wandering</small><Link href={`/field-notes/${nextNote.slug}`}><span>{nextNote.title}</span><i>→</i></Link></nav>
+      <nav className="next-read" aria-label="Continue reading field notes"><small>Next field note</small><Link href={`/field-notes/${nextNote.slug}`}><span>{nextNote.title}</span><i>→</i></Link></nav>
     </main>
   );
 }

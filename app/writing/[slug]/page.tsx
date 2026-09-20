@@ -41,7 +41,7 @@ export default async function WritingPostPage({ params }: { params: Promise<{ sl
           <aside className="article-aside">
             <span>In this note</span>
             <ol>{post.sections.map((section) => <li key={section.heading}><a href={`#${section.heading.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>{section.heading}</a></li>)}</ol>
-            <small>Last tended<br />{post.published}</small>
+            <small>Published<br />{post.published}</small>
           </aside>
           <div className="prose">
             {post.sections.map((section, index) => (
@@ -49,7 +49,7 @@ export default async function WritingPostPage({ params }: { params: Promise<{ sl
                 <span className="prose-number">0{index + 1}</span>
                 <h2>{section.heading}</h2>
                 {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                {section.note && <blockquote><span>NOTE TO SELF</span>{section.note}</blockquote>}
+                {section.note && <blockquote><span>NOTE</span>{section.note}</blockquote>}
               </section>
             ))}
           </div>
