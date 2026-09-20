@@ -2,20 +2,20 @@
 :root{--bg:#fafaf8;--surface:#f0f0ee;--surface-raised:#fff;--text:#28282d;--muted:#62636d;--line:#dddde2;--sun:#f3cc65;--yellow:#85610d;--red:#b84b61;--lavender:#7358ad;--accent:var(--lavender);--mint:#327663;--feature:#eeebf5;--footer:#efedf3;--pattern:color-mix(in srgb,var(--lavender) 18%,var(--bg));--on-accent:#fff;--sans:var(--font-dm,Arial),Arial,sans-serif;--serif:var(--sans);--hand:var(--font-hand,cursive),cursive;color-scheme:light}
 :root[data-theme='dark']{--bg:#101113;--surface:#191a1e;--surface-raised:#202126;--text:#eae9ef;--muted:#a6a5b0;--line:#303137;--yellow:var(--sun);--red:#ee8291;--lavender:#b8a4ec;--mint:#8ecdb4;--feature:#23212c;--footer:#19181f;--on-accent:#19151f;color-scheme:dark}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:32px}body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button,a,input,textarea{-webkit-tap-highlight-color:transparent}button{color:inherit}button,a{touch-action:manipulation}button{cursor:pointer}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:700;line-height:1.25;letter-spacing:-.035em}p{text-wrap:pretty}svg{flex-shrink:0}::selection{background:var(--lavender);color:var(--on-accent)}:focus-visible{outline:2px solid var(--lavender);outline-offset:6px;border-radius:3px}button:disabled{cursor:default}a:hover{color:var(--accent)}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:absolute;left:16px;top:-100px;z-index:100;background:var(--text);color:var(--bg);padding:12px 20px}.skip-link:focus{top:12px}.page-shell,.site-header,.site-footer{width:min(1100px,calc(100% - 96px));margin-inline:auto}.yellow{color:var(--yellow)}.red{color:var(--red)}.lavender,.blue{color:var(--lavender)}.mint{color:var(--mint)}
-.site-header{display:flex;align-items:center;gap:38px;min-height:122px}.wordmark{font-size:26px;font-weight:700;letter-spacing:-1px;display:inline-flex;align-items:center;line-height:1.2;white-space:nowrap}.site-header nav{display:flex;gap:32px;margin-left:auto;align-items:center}.site-header nav a{font-size:15px;padding:12px 0;color:var(--muted);position:relative}.site-header nav a:hover,.site-header nav a[aria-current]{color:var(--text)}.site-header nav a[aria-current]:after{content:'';position:absolute;bottom:4px;left:0;right:0;height:2px;background:var(--lavender)}.theme-toggle{width:40px;height:40px;display:grid;place-items:center;background:none;border:1px solid var(--line);border-radius:50%;color:var(--yellow);transition:transform .3s,background .2s}.theme-toggle:hover{transform:rotate(25deg);background:var(--surface)}
+.site-header{display:flex;align-items:center;gap:38px;min-height:122px}.wordmark{font-size:26px;font-weight:700;letter-spacing:-1px;display:inline-flex;align-items:baseline;gap:6px;line-height:1.2;white-space:nowrap;width:fit-content;color:var(--text)}.site-header nav{display:flex;gap:32px;margin-left:auto;align-items:center}.site-header nav a{font-size:15px;padding:12px 0;color:var(--muted);position:relative}.site-header nav a:hover,.site-header nav a[aria-current]{color:var(--text)}.site-header nav a[aria-current]:after{content:'';position:absolute;bottom:4px;left:0;right:0;height:2px;background:var(--lavender)}.theme-toggle{width:40px;height:40px;display:grid;place-items:center;background:none;border:1px solid var(--line);border-radius:50%;color:var(--yellow);transition:transform .3s,background .2s}.theme-toggle:hover{transform:rotate(25deg);background:var(--surface)}
 .eyebrow,.section-kicker{font-size:12px;letter-spacing:1.9px;font-weight:700;color:var(--lavender);line-height:1.6}.portfolio-hero{display:grid;grid-template-columns:1.18fr 1fr;align-items:center;gap:56px;padding:60px 0 100px}.hero-copy h1{font-size:clamp(48px,5.1vw,68px);letter-spacing:-3px;line-height:1.16;margin:26px 0 27px}.hero-copy h1>span{position:relative;display:inline-block}.scribble{position:absolute;bottom:-9px;left:0;width:100%;height:14px;overflow:visible;fill:none;stroke:var(--sun);stroke-width:2.2;stroke-linecap:round}.hero-lead{font-size:25px;line-height:1.48;letter-spacing:-.6px;margin-bottom:20px}.hero-description{color:var(--muted);font-size:17px;line-height:1.85;max-width:505px}.hero-actions{display:flex;gap:26px;align-items:center;margin-top:30px}.primary-link{display:inline-flex;align-items:center;gap:26px;padding:12px 20px;background:var(--lavender);color:var(--on-accent);border-radius:6px;font-size:15px;font-weight:700;transition:transform .2s,box-shadow .2s}.primary-link:hover{color:var(--on-accent);transform:translateY(-3px);box-shadow:0 5px 0 color-mix(in srgb,var(--lavender) 25%,transparent)}.quiet-link{font-size:14px;display:inline-flex;align-items:center;gap:12px;white-space:nowrap;min-height:42px}.quiet-link span{color:var(--lavender);transition:transform .2s}.quiet-link:hover span{transform:translate(3px,-2px)}.social-links{display:flex;flex-wrap:wrap;gap:8px 22px}.social-links a{display:inline-flex;gap:9px;align-items:center;font-size:16px;font-weight:700;color:var(--text);min-height:44px}.social-links a:hover{color:var(--lavender)}.social-icon{display:flex;color:var(--lavender)}.social-icon svg{width:22px;height:22px}.social-linkedin .social-icon{color:var(--mint)}.social-scholar .social-icon{color:var(--muted)}.hero-copy>.social-links{margin-top:26px}
 /* An open neural sketch, with a faint pattern fading behind the hero. */
 .portfolio-hero{position:relative;isolation:isolate}
 .portfolio-hero:before{content:'';position:absolute;inset:0 -18px 20px 40%;z-index:-1;pointer-events:none;background-image:radial-gradient(circle,var(--pattern) 1px,transparent 1.3px);background-size:23px 23px;mask-image:radial-gradient(ellipse at 60% 43%,#000 5%,transparent 68%)}
-.idea-network{display:block;width:100%;min-width:0;border:0;background:transparent;padding:20px 0;position:relative;text-align:center;isolation:isolate}
-.idea-network:before{content:'';position:absolute;inset:14% 9%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 25% 40%,color-mix(in srgb,var(--lavender) 7%,transparent),transparent 60%),radial-gradient(ellipse at 75% 60%,color-mix(in srgb,var(--mint) 5%,transparent),transparent 60%)}
+.idea-network{display:block;width:100%;min-width:0;border:0;background:transparent;appearance:none;box-shadow:none;padding:20px 0;position:relative;text-align:center;isolation:isolate}
+/* Keep the network transparent: off-center gradient glows clipped at their box edges. */
 .idea-network>svg{display:block;width:100%;height:auto;overflow:visible;margin:0 0 10px}
 .network-edges path{stroke:var(--line);stroke-width:1;fill:none;opacity:.8;transition:stroke .4s,opacity .4s}
 .node-halo{fill:var(--bg);stroke:var(--line);stroke-width:1;transition:stroke .3s}
 .network-orbit{fill:none;stroke:var(--lavender);stroke-opacity:.3;stroke-dasharray:2 8;stroke-width:1;transform-origin:50% 50%}
 .network-spark{fill:none;stroke:var(--sun);stroke-width:2;stroke-linecap:round}
 .network-labels{font:16px var(--hand);fill:var(--muted)}
-.network-hint{display:block;font:400 15px/1.5 var(--hand);color:var(--muted);transform:rotate(-3deg)}
+.network-hint{display:inline-block;font:400 15px/1.5 var(--hand);color:var(--muted);transform:rotate(-3deg)}
 .network-hint span{color:var(--mint);font-size:23px;padding-right:8px}
 .network-traces path{fill:none;stroke-width:1.6;stroke-dasharray:1;opacity:.55;animation:network-connect 1.2s ease backwards}
 .network-nodes>g{transform-box:fill-box;transform-origin:center;animation:thought .75s ease backwards}
@@ -134,3 +134,30 @@ dt { color:var(--muted); } dd { margin:3px 0 0; }
 .about-summary{font-size:18px;color:var(--muted);line-height:1.8;max-width:560px;margin-bottom:24px}.about-page .timeline-section{border-top:1px solid var(--line);max-width:none}.about-page .timeline{max-width:780px}.about-introduction .about-lead{margin-bottom:14px}.footer-right{align-self:center}.footer-right .social-links{gap:8px 20px}
 
 .home-photos .eyebrow,.playground-callout .eyebrow{color:var(--mint)}.home-post:nth-child(2) .post-meta{color:var(--mint)}.home-post:nth-child(3) .post-meta{color:var(--red)}
+
+/* A handwritten detail in the name and a few small section labels. */
+.wordmark-given{color:var(--lavender)}
+.wordmark-family{position:relative;display:inline-block;font:400 1.15em/1 var(--hand);letter-spacing:-.8px;transform:rotate(-4deg);transform-origin:50% 75%;transition:transform .22s ease}
+.wordmark-flourish{position:absolute;width:100%;height:10px;left:0;bottom:-8px;fill:none;stroke:var(--mint);stroke-width:1.6;stroke-linecap:round;overflow:visible}
+.wordmark-flourish path{stroke-dasharray:1}
+.wordmark:hover,.wordmark:focus-visible{color:var(--text)}
+.wordmark:is(:hover,:focus-visible) .wordmark-family{transform:rotate(-1deg) translateY(-1px)}
+.wordmark:is(:hover,:focus-visible) .wordmark-flourish path{animation:flourish-draw .45s ease both}
+@keyframes flourish-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.home-page .section-heading .eyebrow,.playground-callout .eyebrow{font:400 21px/1.3 var(--hand);letter-spacing:0;transform:rotate(-3deg);transform-origin:left center;margin-bottom:5px}
+/* The keyboard focus indicator belongs to the hint, not a box around the drawing. */
+.idea-network:focus-visible{outline:none}
+.idea-network:focus-visible .network-hint{outline:2px solid var(--lavender);outline-offset:6px;border-radius:6px}
+/* Small, interaction-led movements; reading content stays still. */
+.social-icon{transition:transform .2s ease}
+.social-links a:is(:hover,:focus-visible) .social-icon{transform:translateY(-2px) rotate(-5deg)}
+.read-link span,.card-arrow,.writing-arrow{display:inline-block;transition:transform .2s ease}
+.read-link:is(:hover,:focus-visible) span{transform:translateX(4px)}
+.work-card:is(:hover,:focus-visible) .card-arrow,.writing-row:is(:hover,:focus-visible) .writing-arrow{transform:translate(2px,-2px)}
+.project-mark{transition:transform .22s ease}
+.work-card:is(:hover,:focus-visible) .project-mark{transform:rotate(-5deg)}
+.archive-project .project-initial{transition:transform .22s ease,border-radius .22s ease}
+.archive-project:focus-within .project-initial{transform:rotate(-3deg);border-radius:15px}
+@media(hover:hover){.archive-project:hover .project-initial{transform:rotate(-3deg);border-radius:15px}}
+@media(max-width:700px){.home-page .section-heading .eyebrow,.playground-callout .eyebrow{font-size:19px;margin-bottom:5px}.wordmark-flourish{bottom:-7px}}
+@media(prefers-reduced-motion:reduce){.wordmark:is(:hover,:focus-visible) .wordmark-family,.social-links a:is(:hover,:focus-visible) .social-icon,.read-link:is(:hover,:focus-visible) span,.work-card:is(:hover,:focus-visible) .card-arrow,.writing-row:is(:hover,:focus-visible) .writing-arrow,.work-card:is(:hover,:focus-visible) .project-mark,.archive-project:is(:hover,:focus-within) .project-initial{transform:none}}

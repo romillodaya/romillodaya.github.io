@@ -26,9 +26,12 @@ Chrome's rendered-font inspection confirmed:
 | Coral | `#ee8291` | `#b84b61` | Occasional metadata, one neural node, small heading/divider details |
 
 - Main backgrounds and cards stay neutral. The footer has a faint violet tint; the playground returns to an unfilled section with dashed separators.
-- A small dot pattern fades behind the homepage introduction, with subtle lavender/mint light behind the neural sketch.
+- A small dot pattern fades behind the homepage introduction. The network itself is fully transparent: the separate off-center glow layer was removed because it produced a visible rectangular edge.
 - The original open 3–5–5–3 neural sketch is restored, including its dotted orbit, curved connections, hover motion, and tap/keyboard activation. Three gradient traces animate on activation. Reduced-motion preferences disable animation and retain the drawing. The boxed panel and numbered input controls are removed.
-- The header and footer wordmarks read **Romil Lodaya**, and page title templates include the full name. Domain/DNS settings are unchanged.
+- The shared header/footer wordmark pairs DM Sans for **Romil** with the existing self-hosted Kalam font for **Lodaya**, plus a small mint underline. Page title templates include the full name. Domain/DNS settings are unchanged.
+- Handwritten typography is also used for the four small homepage section labels. Main headings, navigation, and body text retain DM Sans.
+- Additional movement is limited to small social-icon lifts, reading-arrow nudges, project-icon tilts, and a short wordmark underline redraw on interaction. There are no added page-wide entrance animations or persistent effects. Reduced motion disables these animations and movements.
+- Keyboard focus for the neural illustration is shown around its hint rather than framing the whole drawing.
 - Social labels remain 16px on desktop and 15px on mobile, with 22px icons and a minimum 44px link height.
 - The repeated homepage biography stays removed, and the shorter descriptions and sample disclosures are retained throughout the site. Existing route slugs are unchanged.
 
