@@ -1,7 +1,8 @@
 import type { SVGProps } from 'react';
-export type IconName = 'write' | 'compass' | 'code' | 'arrow' | 'github' | 'linkedin' | 'scholar' | 'sun' | 'moon' | 'sound' | 'muted';
+export type IconName = 'write' | 'compass' | 'code' | 'arrow' | 'github' | 'linkedin' | 'scholar' | 'mail' | 'sun' | 'moon' | 'sound' | 'muted';
 export function SiteIcon({ name, ...props }: SVGProps<SVGSVGElement> & { name: IconName }) {
   const paths = {
+    mail: <><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></>,
     scholar: <><path d="m2 9 10-7 10 7-10 7L2 9Z"/><path d="M6 12v6c3 3 9 3 12 0v-6M22 9v8"/></>,
     sun: <><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></>,
     moon: <path d="M20 15.3A8.5 8.5 0 0 1 8.7 4 8.5 8.5 0 1 0 20 15.3Z"/>,

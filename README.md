@@ -39,7 +39,7 @@ The demo uses three credited Unsplash photographs, bundled locally. They are sam
 - `app/components/site-header.tsx` and `site-footer.tsx`: navigation and footer.
 - `app/layout.tsx`: page metadata and initial theme. The saved theme loads before the page is painted.
 
-GitHub and LinkedIn links use the usernames supplied by Romil and live in `app/components/social-links.tsx`. No email address or newsletter signup is configured. The original `public/og.png` social preview is retained.
+Social profile links live in `app/components/social-links.tsx`. The shared footer links to `hello@romillodaya.com` in `app/components/site-footer.tsx`. No newsletter signup is configured. The original `public/og.png` social preview is retained.
 
 ## Build and check
 
