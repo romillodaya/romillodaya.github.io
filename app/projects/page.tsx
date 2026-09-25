@@ -1,7 +1,15 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { projects } from '../content';
-export const metadata: Metadata = { title: 'Projects', description: 'Software projects and experiments.' };
+import { ProjectCard } from '../components/project-card';
+
+export const metadata: Metadata = { title: 'Projects', description: 'Machine learning projects, experiments, and implementation notes.' };
+
 export default function ProjectsIndex() {
-  return <main id="main-content" className="page-shell"><header className="page-hero"><p className="section-kicker">SOFTWARE & EXPERIMENTS</p><h1>Projects.</h1><p>What I’ve built, how it works, and what I learned.</p></header><section className="project-archive" aria-label="Project archive">{projects.map(project => <article className="archive-project" key={project.slug}><span className="project-initial" aria-hidden="true">{project.title[0]}</span><div><div className="project-topline"><span>{project.index} · {project.year}</span><span>{project.status}</span></div><h2><Link href={`/projects/${project.slug}`}>{project.title}</Link></h2><p>{project.copy}</p><ul aria-label="Technologies">{project.tags.map(tag => <li key={tag}>{tag}</li>)}</ul><Link href={`/projects/${project.slug}`}>Read the project notes ↗</Link></div></article>)}</section><p className="demo-note">Sample project concepts from the original demo.</p></main>;
+  return (
+    <main id="main-content" className="page-shell ml-projects-page">
+      <header className="page-hero"><p className="section-kicker">MACHINE LEARNING & ENGINEERING</p><h1>Projects.</h1><p>From the first question to the implementation details.</p></header>
+      <div className="archive-context"><span>{projects.length.toString().padStart(2, '0')} projects</span>{projects.some(project => project.example) && <p>Example projects for now. Real work and repositories will replace these.</p>}</div>
+      <section className="ml-project-list" aria-label="Project archive">{projects.map(project => <ProjectCard key={project.slug} project={project}/>)}</section>
+    </main>
+  );
 }

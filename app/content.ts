@@ -1,4 +1,9 @@
+import { mlWriting } from './content/writing';
+import { mlProjects } from './content/projects';
+import type { ContentBlock } from './content/blocks';
+
 export type WritingPost = {
+  example?: boolean;
   number: string;
   slug: string;
   title: string;
@@ -9,10 +14,13 @@ export type WritingPost = {
   published: string;
   accent: 'violet' | 'orange' | 'mint' | 'yellow';
   opening: string;
-  sections: Array<{ heading: string; paragraphs: string[]; note?: string }>;
+  sections: Array<{ id?: string; heading: string; paragraphs: string[]; note?: string; blocks?: ContentBlock[] }>;
+  summary?: string[];
+  sources?: Array<{ title: string; href: string }>;
+  relatedProject?: string;
 };
 
-export const writing: WritingPost[] = [
+const legacyWriting: WritingPost[] = [
   {
     number: '01',
     slug: 'confused-productively',
@@ -157,13 +165,19 @@ export const writing: WritingPost[] = [
 ];
 
 export type Project = {
+  example?: boolean;
   index: string;
   slug: string;
   status: string;
   title: string;
   copy: string;
   tags: string[];
-  visual: 'papertrail' | 'window-seat' | 'need-this';
+  visual?: 'papertrail' | 'window-seat' | 'need-this';
+  thumbnail?: { src: string; alt: string; caption?: string };
+  category?: string;
+  repository?: { href: string; placeholder: boolean };
+  evaluation?: string[];
+  relatedPost?: string;
   year: string;
   role: string;
   challenge: string;
@@ -171,7 +185,7 @@ export type Project = {
   takeaway: string;
 };
 
-export const projects: Project[] = [
+const legacyProjects: Project[] = [
   {
     index: 'P-01', slug: 'papertrail', status: 'Ongoing', title: 'Papertrail',
     copy: 'A tool for collecting reading highlights, connecting related notes, and finding them again.',
@@ -236,12 +250,24 @@ export const fieldNotes: FieldNote[] = [
   },
 ];
 
-export function getWritingPost(slug: string) { return writing.find((post) => post.slug === slug); }
-export function getProject(slug: string) { return projects.find((project) => project.slug === slug); }
+export const writing: WritingPost[] = mlWriting;
+export const projects: Project[] = mlProjects;
+// Keep previously shared URLs working without listing the old demos in the archives.
+export const allWriting = [...writing, ...legacyWriting.map(post => ({ ...post, example: true }))];
+export const allProjects = [...projects, ...legacyProjects.map(project => ({ ...project, example: true }))];
+
+export function getWritingPost(slug: string) { return allWriting.find((post) => post.slug === slug); }
+export function getProject(slug: string) { return allProjects.find((project) => project.slug === slug); }
 export function getFieldNote(slug: string) { return fieldNotes.find((note) => note.slug === slug); }
 
-for (const post of writing) {
-  const words = [post.opening, ...post.sections.flatMap(section => [section.heading, ...section.paragraphs, section.note ?? ''])].join(' ').trim().split(/\s+/).length;
+for (const post of allWriting) {
+  const words = [post.opening, ...post.sections.flatMap(section => [section.heading, ...section.paragraphs, section.note ?? '', ...(section.blocks ?? []).map(block => {
+    if (block.type === 'paragraph' || block.type === 'callout') return block.text;
+    if (block.type === 'list') return block.items.join(' ');
+    if (block.type === 'code') return block.code;
+    if (block.type === 'equation') return block.expression + ' ' + block.explanation;
+    return block.caption;
+  })])].join(' ').trim().split(/\s+/).length;
   const minutes = Math.max(1, Math.ceil(words / 220));
   post.readTime = `${minutes} min read`;
   post.meta = `${post.category} · ${minutes} min`;

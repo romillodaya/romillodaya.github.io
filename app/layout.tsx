@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { SiteFooter } from './components/site-footer';
 import { SiteHeader } from './components/site-header';
 import './globals.css';
+import './styles/content.css';
 import localFont from 'next/font/local';
 const dmSans = localFont({ src: [{ path: '../public/fonts/dm-sans-regular.ttf', weight: '400' }, { path: '../public/fonts/dm-sans-bold.ttf', weight: '700' }], variable: '--font-dm', display: 'swap' });
 const kalam = localFont({ src: '../public/fonts/kalam.ttf', weight: '400', variable: '--font-hand', display: 'swap' });

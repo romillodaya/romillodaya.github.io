@@ -10,6 +10,7 @@ The current changes are documented in `docs/portfolio-redesign/REFRESH.md`, foll
 - `app/components/playground-tools.tsx`: client-only vector and text tools.
 - `app/about/page.tsx`: biography and timeline layout.
 - `app/globals.css`: shared typography, themes, and responsive layouts.
+- `app/styles/content.css`: project thumbnails and spacious technical article layouts.
 
 ## Run locally
 
@@ -20,13 +21,13 @@ npm run dev
 
 ## Add an entry
 
-Content lives in `app/content.ts`. Copy an existing record in the appropriate collection:
+Projects live in `app/content/projects.ts`; technical articles live in `app/content/writing.ts`. The shared collections in `app/content.ts` also contain the field notes and retain older sample URLs.
 
-- `writing`: blog posts, short notes, or longer essays. Give each entry a unique URL `slug`, title, excerpt, category, publication label, opening, and sections. Put newer entries first. Reading time is calculated from the text.
-- `fieldNotes`: trips, events, walks, and photo stories. Add a title, subtitle, date, and paragraphs. Add the entry's photograph to the `photographs` mapping in `app/components/photo-art.tsx` and extend the `FieldNote['art']` type with its key. Keep image filenames lowercase with hyphens.
-- `projects`: projects and experiments, with the problem, approach, and takeaway.
+- Projects support a thumbnail, repository link, stack, problem, approach, evaluation notes, and a related article.
+- Articles support paragraphs, diagrams, images with captions, equations, code, lists, callouts, and primary references. Reading time and the table of contents update automatically.
+- Field notes retain their photograph mapping in `app/components/photo-art.tsx`.
 
-The homepage and archive pages update from these collections automatically. Existing URL slugs are preserved. Replace sample entries and remove the corresponding sample labels before publishing personal content. The current sample labels are in the homepage, archive pages, and detail headers/footers.
+See [the content authoring guide](docs/content/AUTHORING.md) for copyable examples and image guidance. The current ML projects and technical articles are examples. Project GitHub links are explicitly labeled placeholders and open Romil's profile.
 
 ## Photographs
 
